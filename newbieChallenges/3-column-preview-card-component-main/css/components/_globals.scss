@@ -1,0 +1,17 @@
+$color-bright-orange: hsl(31, 77%, 52%);
+$color-dark-cyan: hsl(184, 100%, 22%);
+$color-very-dark-cyan: hsl(179, 100%, 13%);
+$color-p-white: hsla(0, 0%, 100%, 0.75);
+$color-bg-heading-btn: hsl(0, 0%, 95%);
+$title-font: 'Big Shoulders Display', cursive;
+$text-font: 'Lexend Deca', sans-serif;
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-size: 15px;
+}

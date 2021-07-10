@@ -1,0 +1,193 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: #fafafa;
+}
+
+.wrapper {
+  width: 75%;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #fafafa;
+}
+
+.hero {
+  margin-top: 60px;
+  max-width: 480px;
+}
+.hero__title {
+  font-weight: 200;
+  font-size: 22px;
+  color: #4c4e61;
+  text-align: center;
+}
+.hero__title span {
+  font-weight: 700;
+  display: block;
+}
+.hero__description {
+  margin-top: 10px;
+  text-align: center;
+  font-size: 14px;
+  color: #a3a5ae;
+}
+
+.tools {
+  margin: 30px 0px;
+}
+.tools__card {
+  position: relative;
+  margin-bottom: 20px;
+  width: 100%;
+  max-width: 280px;
+  height: 200px;
+  border-radius: 4px;
+  padding: 10px 15px;
+  background-color: #fafafa;
+  -webkit-box-shadow: 1px 2px 5px #4c4e61;
+          box-shadow: 1px 2px 5px #4c4e61;
+}
+.tools__card:nth-child(1) {
+  border-top: 3px solid #45d3d3;
+}
+@media screen and (min-width: 1200px) {
+  .tools__card:nth-child(1) {
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 2;
+    grid-row: 2/4;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1/2;
+  }
+}
+.tools__card:nth-child(1) .tools__card__icon {
+  background-image: url("../images/icon-supervisor.svg");
+}
+.tools__card:nth-child(2) {
+  border-top: 3px solid #ea5353;
+}
+@media screen and (min-width: 1200px) {
+  .tools__card:nth-child(2) {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 2;
+    grid-row: 1/3;
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    grid-column: 2/3;
+  }
+}
+.tools__card:nth-child(2) .tools__card__icon {
+  background-image: url("../images/icon-team-builder.svg");
+}
+.tools__card:nth-child(3) {
+  border-top: 3px solid #fcaf4a;
+}
+@media screen and (min-width: 1200px) {
+  .tools__card:nth-child(3) {
+    -ms-grid-row: 3;
+    -ms-grid-row-span: 2;
+    grid-row: 3/5;
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    grid-column: 2/3;
+  }
+}
+.tools__card:nth-child(3) .tools__card__icon {
+  background-image: url("../images/icon-karma.svg");
+}
+.tools__card:nth-child(4) {
+  border-top: 3px solid #549ef2;
+}
+@media screen and (min-width: 1200px) {
+  .tools__card:nth-child(4) {
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 2;
+    grid-row: 2/4;
+    -ms-grid-column: 3;
+    -ms-grid-column-span: 1;
+    grid-column: 3/4;
+  }
+}
+.tools__card:nth-child(4) .tools__card__icon {
+  background-image: url("../images/icon-calculator.svg");
+}
+.tools__card__title {
+  font-size: 20px;
+  font-weight: 600;
+  color: #4c4e61;
+}
+.tools__card__description {
+  margin-top: 5px;
+  font-size: 13px;
+  color: #a3a5ae;
+}
+.tools__card__icon {
+  width: 60px;
+  height: 60px;
+  margin-top: 15px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+}
+@media screen and (min-width: 1200px) {
+  .tools {
+    display: -ms-grid;
+    display: grid;
+    margin: 50px auto;
+    -ms-grid-columns: 300px 20px 300px;
+    grid-template-columns: repeat(2, 300px);
+    -ms-grid-rows: 110px 10px 110px 10px 110px;
+    grid-template-rows: repeat(3, 110px);
+    row-gap: 10px;
+    -webkit-column-gap: 20px;
+       -moz-column-gap: 20px;
+            column-gap: 20px;
+  }
+  .tools > *:nth-child(1) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+  }
+  .tools > *:nth-child(2) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 3;
+  }
+  .tools > *:nth-child(3) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+  }
+  .tools > *:nth-child(4) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 3;
+  }
+  .tools > *:nth-child(5) {
+    -ms-grid-row: 5;
+    -ms-grid-column: 1;
+  }
+  .tools > *:nth-child(6) {
+    -ms-grid-row: 5;
+    -ms-grid-column: 3;
+  }
+  .tools__card {
+    padding: 25px;
+    height: 225px;
+  }
+}

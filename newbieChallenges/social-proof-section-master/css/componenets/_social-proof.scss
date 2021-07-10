@@ -1,0 +1,179 @@
+
+.wrapper {
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 50px;
+    @media screen and (min-width: 1000px) {
+        width: 80%;
+        margin-top: 80px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas: 
+            "main  rating"
+            "cards cards";
+    }
+}
+
+.main-info {
+    text-align: center;
+    &__title {
+        max-width: 420px;
+        color: $color-very-dark-magenta;
+        font-weight: 700;
+        line-height: 32px;
+        font-size: 32px;
+        padding: 30px;
+    }
+    &__description {
+        max-width: 500px;
+        color: $color-neutral-dark-grayish-magenta;
+        padding-bottom: 25px;
+        font-size: 15px;
+    }
+    @media screen and (min-width: 1000px) {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        &__title {
+            padding: 0px 40px 15px 0px;
+            text-align: left;
+            font-size: 46px;
+            line-height: 46px;
+        }
+        &__description {
+            text-align: left;
+            padding-right: 40px;
+        }
+    }
+    
+}
+
+.rating {
+    margin-bottom: 30px;
+    &__container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: $color-neutral-light-grayish-magenta;
+        border-radius: 10px;
+        margin-bottom: 15px;
+        padding: 10px 0px;
+        &__stars {
+            padding-bottom: 5px;
+            &__star {
+                display: inline-block;
+                width: 15px;
+                height: 15px;
+                background-image: url("../images/icon-star.svg");
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                margin: 0px 3px;
+            }
+        }
+        h3 {
+            color: $color-very-dark-magenta;
+            font-size: 14px;
+        }
+    }
+    @media screen and (min-width: 1000px) {
+        position: relative;
+        margin-top: 15px;
+        &__container {
+            width: 500px;
+            flex-direction: row;
+            align-items: center;
+            position: absolute;
+            padding: 15px 50px 15px 20px;
+            &:nth-child(2) {
+                top: 65px;
+                left: 50px;
+            }
+            &:nth-child(3) {
+                top: 130px;
+                left: 100px;
+            }
+            &__stars {
+                padding: 0;
+                margin-right: 25px;
+            }
+            & h3 {
+                font-size: 18px;
+            }
+        }
+    }
+}
+
+.reviews {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+    &__card {
+        width: 100%;
+        max-width: 360px;
+        border-radius: 5px;
+        padding: 30px 45px 25px 30px;
+        background-color: $color-very-dark-magenta;
+        margin-bottom: 15px;
+        display: grid;
+        align-items: center;
+        grid-template-columns: 50px 200px 1fr;
+        grid-template-rows: 50px 1fr;
+        gap: 10px;
+        &:nth-child(1) &__img {
+            background-image: url(../images/image-colton.jpg);
+        }
+        &:nth-child(2) &__img {
+            background-image: url(../images/image-irene.jpg);
+        }
+        &:nth-child(3) &__img {
+            background-image: url(../images/image-anne.jpg);
+        }
+        &__img {
+            display: inline-block;
+            background-repeat: no-repeat;
+            background-size: cover;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            grid-row: 1 / 2;
+        }
+        &__viewer-data {
+            grid-row: 1;
+            grid-column: 2;
+            &__name {
+                color: white;
+                font-size: 13px;
+                margin-bottom: 5px;
+            }
+            &__status {
+                color: $color-soft-pink;
+                font-size: 13px;
+            }
+        }
+        &__text-review {
+            font-size: 13px;
+            line-height: 20px;
+            grid-row: 3;
+            grid-column: 1 / 4;
+            color: $color-neutral-light-grayish-magenta;
+        }
+    }
+    @media screen and (min-width: 1000px) {
+        grid-area: cards;
+        position: relative;
+        margin-top: 40px;
+        height: 300px;
+        &__card {
+            position: absolute;
+            &:nth-child(2) {
+                left: 390px;
+                top: 15px;
+            }
+            &:nth-child(3) {
+                left: 780px;
+                top: 30px;
+            }
+        }
+    }
+}
