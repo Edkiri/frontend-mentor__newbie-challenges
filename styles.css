@@ -60,6 +60,8 @@
   margin: 10px;
   border-radius: 2px;
   border: 2px solid #A1DD70;
+  max-width: 400px;
+  min-width: 350px;
 }
 .challenges__cards-container__card__link {
   position: absolute;
